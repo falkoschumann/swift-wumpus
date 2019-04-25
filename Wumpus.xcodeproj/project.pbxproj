@@ -26,6 +26,7 @@
 		CCA098BC227250500030AECD /* Wumpus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Wumpus; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA098BF227250500030AECD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CCEA836D2272512D005B2B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CCEA836E22725174005B2B98 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		CCA098B3227250500030AECD = {
 			isa = PBXGroup;
 			children = (
+				CCEA836E22725174005B2B98 /* LICENSE.txt */,
 				CCEA836D2272512D005B2B98 /* README.md */,
 				CCA098BE227250500030AECD /* Wumpus */,
 				CCA098BD227250500030AECD /* Products */,
