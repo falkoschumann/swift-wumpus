@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CCA098C0227250500030AECD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA098BF227250500030AECD /* main.swift */; };
+		CCEA8376227251E1005B2B98 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA8375227251E1005B2B98 /* GameTests.swift */; };
+		CCEA837C2272527C005B2B98 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA837B2272527C005B2B98 /* Game.swift */; };
+		CCEA837D2272527C005B2B98 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA837B2272527C005B2B98 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +30,21 @@
 		CCA098BF227250500030AECD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CCEA836D2272512D005B2B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CCEA836E22725174005B2B98 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		CCEA8373227251E1005B2B98 /* WumpusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WumpusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEA8375227251E1005B2B98 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		CCEA8377227251E1005B2B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCEA837B2272527C005B2B98 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CCA098B9227250500030AECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEA8370227251E1005B2B98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +60,7 @@
 				CCEA836E22725174005B2B98 /* LICENSE.txt */,
 				CCEA836D2272512D005B2B98 /* README.md */,
 				CCA098BE227250500030AECD /* Wumpus */,
+				CCEA8374227251E1005B2B98 /* WumpusTests */,
 				CCA098BD227250500030AECD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				CCA098BC227250500030AECD /* Wumpus */,
+				CCEA8373227251E1005B2B98 /* WumpusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +77,19 @@
 		CCA098BE227250500030AECD /* Wumpus */ = {
 			isa = PBXGroup;
 			children = (
+				CCEA837B2272527C005B2B98 /* Game.swift */,
 				CCA098BF227250500030AECD /* main.swift */,
 			);
 			path = Wumpus;
+			sourceTree = "<group>";
+		};
+		CCEA8374227251E1005B2B98 /* WumpusTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCEA8375227251E1005B2B98 /* GameTests.swift */,
+				CCEA8377227251E1005B2B98 /* Info.plist */,
+			);
+			path = WumpusTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +112,23 @@
 			productReference = CCA098BC227250500030AECD /* Wumpus */;
 			productType = "com.apple.product-type.tool";
 		};
+		CCEA8372227251E1005B2B98 /* WumpusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCEA8378227251E1005B2B98 /* Build configuration list for PBXNativeTarget "WumpusTests" */;
+			buildPhases = (
+				CCEA836F227251E1005B2B98 /* Sources */,
+				CCEA8370227251E1005B2B98 /* Frameworks */,
+				CCEA8371227251E1005B2B98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WumpusTests;
+			productName = WumpusTests;
+			productReference = CCEA8373227251E1005B2B98 /* WumpusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +140,9 @@
 				ORGANIZATIONNAME = "Falko Schumann";
 				TargetAttributes = {
 					CCA098BB227250500030AECD = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					CCEA8372227251E1005B2B98 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -114,9 +160,20 @@
 			projectRoot = "";
 			targets = (
 				CCA098BB227250500030AECD /* Wumpus */,
+				CCEA8372227251E1005B2B98 /* WumpusTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCEA8371227251E1005B2B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCA098B8227250500030AECD /* Sources */ = {
@@ -124,6 +181,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA098C0227250500030AECD /* main.swift in Sources */,
+				CCEA837C2272527C005B2B98 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEA836F227251E1005B2B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEA8376227251E1005B2B98 /* GameTests.swift in Sources */,
+				CCEA837D2272527C005B2B98 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +332,42 @@
 			};
 			name = Release;
 		};
+		CCEA8379227251E1005B2B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QC6EN37P56;
+				INFOPLIST_FILE = WumpusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.muspellheim.WumpusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CCEA837A227251E1005B2B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QC6EN37P56;
+				INFOPLIST_FILE = WumpusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.muspellheim.WumpusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -282,6 +385,15 @@
 			buildConfigurations = (
 				CCA098C4227250500030AECD /* Debug */,
 				CCA098C5227250500030AECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCEA8378227251E1005B2B98 /* Build configuration list for PBXNativeTarget "WumpusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEA8379227251E1005B2B98 /* Debug */,
+				CCEA837A227251E1005B2B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
