@@ -14,6 +14,7 @@
 *   As a hunter, I want to move one room.
 *   As a hunter, I want to shoot a crooked arrow into a tunnel so that I can got the wumpus. I have 5 arrows. I lose when I run out. Each arrow can go from 1 to 5 rooms. If the arrow can't go that way (i.e. no tunnel) it moves at random to the next room. If the arrow hits the Wumpus, I win. I the arrow hit me, I lose.
 *   As a player, I want to read instructions so that I understand the game.
+*   As a player, I want to restart a finished game with same settings or new settings.
 
 ### Hazards
 
