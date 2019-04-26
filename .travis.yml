@@ -1,3 +1,4 @@
+osx_image: xcode10.2
 language: swift
 xcode_project: Wumpus.xcodeproj
 xcode_scheme: Wumpus
