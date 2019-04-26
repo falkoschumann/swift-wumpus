@@ -1,5 +1,7 @@
 # Hunt the Wumpus
 
+Hunt the Wumpus is a text-based adventure game originally developed in 1973 by Gregory Yob. This is a new development in Swift.
+
 ## User Stories
 
 ### Wumpus
