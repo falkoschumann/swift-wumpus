@@ -34,6 +34,7 @@
 		CCEA8375227251E1005B2B98 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		CCEA8377227251E1005B2B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCEA837B2272527C005B2B98 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CCEA837E22739FB1005B2B98 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		CCA098B3227250500030AECD = {
 			isa = PBXGroup;
 			children = (
+				CCEA837E22739FB1005B2B98 /* .travis.yml */,
 				CCEA836E22725174005B2B98 /* LICENSE.txt */,
 				CCEA836D2272512D005B2B98 /* README.md */,
 				CCA098BE227250500030AECD /* Wumpus */,
