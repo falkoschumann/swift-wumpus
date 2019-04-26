@@ -23,20 +23,32 @@ class GameTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testNoCrossoversOfItems() {
+        let game = Game()
+        
+        XCTAssertNotEqual(game.wumpusesRoom, game.huntersRoom)
+    }
+    
     func testMove() {
         let game = Game()
-        game.room = 3
+        game.huntersRoom = 3
         
-        XCTAssertEqual(game.tunnel1, 2, "Tunnel 1 must be lead to room 2")
-        XCTAssertEqual(game.tunnel2, 4, "Tunnel 2 must be lead to room 4")
-        XCTAssertEqual(game.tunnel3, 12, "Tunnel 3 must be lead to room 12")
+        var reachableRooms = game.reachableRooms(fromRoom: 3)
+        XCTAssertEqual(reachableRooms.0, 2, "Tunnel 1 must be lead to room 2")
+        XCTAssertEqual(reachableRooms.1, 4, "Tunnel 2 must be lead to room 4")
+        XCTAssertEqual(reachableRooms.2, 12, "Tunnel 3 must be lead to room 12")
+
+        XCTAssertThrowsError(try game.moveHunterTo(room: 20), "Move to 20 is not legal") { (error) -> Void in
+            XCTAssertEqual(error as? GameError, GameError.illegalMove)
+        }
         
-        game.moveTo(room: 4)
+        try! game.moveHunterTo(room: 4)
         
-        XCTAssertEqual(game.room, 4, "Player must be in room 4")
-        XCTAssertEqual(game.tunnel1, 3, "Tunnel 1 must be lead to room 3")
-        XCTAssertEqual(game.tunnel2, 5, "Tunnel 2 must be lead to room 5")
-        XCTAssertEqual(game.tunnel3, 14, "Tunnel 3 must be lead to room 14")
+        XCTAssertEqual(game.huntersRoom, 4, "Hunter must be in room 4")
+        reachableRooms = game.reachableRooms(fromRoom: 4)
+        XCTAssertEqual(reachableRooms.0, 3, "Tunnel 1 must be lead to room 3")
+        XCTAssertEqual(reachableRooms.1, 5, "Tunnel 2 must be lead to room 5")
+        XCTAssertEqual(reachableRooms.2, 14, "Tunnel 3 must be lead to room 14")
     }
 
     func testPerformanceExample() {

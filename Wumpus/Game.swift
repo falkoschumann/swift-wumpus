@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum GameError: Error {
+    case illegalMove
+}
+
 class Game {
     
     private let cave = [
@@ -36,34 +40,39 @@ class Game {
         [13, 16, 19]
     ]
     
-    internal var room: Int = 1
+    internal var wumpusesRoom = 0
+    internal var huntersRoom = 0
     
-    var tunnel1: Int {
-        get {
-            let roomIndex = room - 1
-            let tunnelIndex = 0
-            return cave[roomIndex][tunnelIndex]
-        }
+    init() {
+        repeat {
+            locateItems()
+        } while hasItemCrossovers()
+    }
+
+    private func locateItems() {
+        wumpusesRoom = randomRoom()
+        huntersRoom = randomRoom()
     }
     
-    var tunnel2: Int {
-        get {
-            let roomIndex = room - 1
-            let tunnelIndex = 1
-            return cave[roomIndex][tunnelIndex]
-        }
+    private func randomRoom() -> Int {
+        return Int.random(in: 1...20)
     }
     
-    var tunnel3: Int {
-        get {
-            let roomIndex = room - 1
-            let tunnelIndex = 2
-            return cave[roomIndex][tunnelIndex]
-        }
+    private func hasItemCrossovers() -> Bool {
+        return wumpusesRoom == huntersRoom
     }
     
-    func moveTo(room: Int) {
-        self.room = room
+    func reachableRooms(fromRoom: Int) -> (Int, Int, Int) {
+        let roomIndex = fromRoom - 1
+        return (cave[roomIndex][0], cave[roomIndex][1], cave[roomIndex][2])
+    }
+    
+    func moveHunterTo(room: Int) throws {
+        let rooms = reachableRooms(fromRoom: huntersRoom)
+        guard rooms.0 == room || rooms.1 == room || rooms.2 == room else {
+            throw GameError.illegalMove
+        }
+        self.huntersRoom = room
     }
 
 }
