@@ -1,4 +1,4 @@
 language: swift
 xcode_project: Wumpus.xcodeproj
-xcode_scheme: WumpusTests
+xcode_scheme: Wumpus
 xcode_destination: platform=macOS
